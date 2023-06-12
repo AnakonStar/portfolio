@@ -1,0 +1,130 @@
+@import './styles/mixins';
+@import './styles/variables';
+
+html, body {
+    @include full-screen;
+    scroll-behavior: smooth;
+}
+
+* {
+    @include no-gaps;
+    font-family: $main-font;
+}
+
+p, span {
+    font-weight: $weight-text;
+    color: #717171;
+}
+
+h1, a {
+    font-weight: $weight-title;
+}
+
+header {
+    width: 100%;
+    box-shadow: 0 1px 10px #DDD;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    background-color: #FFF;
+    nav {
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            li {
+                display: block;
+                padding: 2px;
+                list-style-type: none;
+               a {
+                color: $primary-color;
+                text-decoration: none;
+                font-size: 20px;
+               } 
+            }
+        }
+    }
+}
+
+// Introduction 
+
+.introduction {
+    @include section;
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        h1 {
+            font-size: 40px;
+            color: #121212;
+            span {
+                font-size: 80px;
+                color: $primary-color;
+                line-height: 1;
+                
+                font-weight: $weight-title;
+            }
+            
+        }
+        p {
+            font-size: 25px;
+        }
+        .icons {
+            flex-direction: row;
+            gap: 10px;
+            svg {
+                border-radius: 100;
+                height: 55px;
+                width: auto;
+            }
+        }
+    }
+}
+
+// About Me
+
+.aboutme {
+    @include section;
+    div {
+        width: 60%;
+        display: flex;
+        flex: row;
+        justify-content: center;
+        gap: 80px;
+        img {
+            border-radius: 100%;
+            height: 320px;
+            width: 320px;
+            object-fit: cover;
+        }
+        .text {
+            width: 50%;
+            flex-direction: column;
+            gap: 20px;
+            h1 {
+                color: $primary-color;
+                font-size: 30px;
+                text-transform: uppercase;
+            }
+            h2 {
+                color: #121212;
+                font-size: 40px;
+            }
+            p {
+                font-size: 25px;
+                text-align: justify;
+            }
+        }
+        
+    }
+}
+
+// Habilities 
+
+.habilities {
+    @include section;
+}

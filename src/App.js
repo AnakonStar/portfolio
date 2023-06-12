@@ -1,30 +1,21 @@
-import './App.css';
+import './App.scss';
 import { useRef } from 'react';
-import Header from './components/Header';
-import Lottie, {LottieRefCurrentProps} from "lottie-react";
-import animIntroduc from './assets/animations/introduc-animation.json';
+import Header from './components/Header/Header';
+
+import Introduction from './components/Introduction/index';
+import AboutMe from './components/AboutMe/index';
+import Habilities from './components/Habilities/index';
+
+import photo from './assets/images/photo.jpeg';
 
 function App() {
-  const introRef = useRef<LottieRefCurrentProps>(null);
   return (
     <div className="container">
       <Header />
       <main>
-        <div className='introduction'>
-        <Lottie className='animat' lottieRef={introRef} animationData={animIntroduc} />
-          <div>
-            <h1>
-              Portfólio de <br/>
-              <span>
-                Enzo Santana
-              </span>
-            </h1>
-            <Lottie className='animat' lottieRef={introRef} animationData={animIntroduc} />
-          </div>
-        </div>
-        <div className='certificates'>
-
-        </div>
+        <Introduction />
+        <AboutMe />
+        <Habilities />
       </main>
     </div>
   );
